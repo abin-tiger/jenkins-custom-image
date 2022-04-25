@@ -1,6 +1,7 @@
 FROM jenkins/jenkins:2.303.2-jdk11
 RUN jenkins-plugin-cli --plugins \
         kubernetes:1.30.1 \
+        pipeline-utility-steps \
         workflow-aggregator \
         git \
         configuration-as-code \
