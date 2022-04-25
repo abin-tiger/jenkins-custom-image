@@ -40,3 +40,11 @@ RUN jenkins-plugin-cli --plugins \
         cctray-xml \
         pipeline-aws \
         prometheus
+        
+USER root
+
+RUN curl --insecure "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.2.47.zip" -o "awscliv2.zip" \
+    && unzip awscliv2.zip \ 
+    && ./aws/install
+
+USER jenkins
