@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.303.3-jdk11
+FROM jenkins/jenkins:3.11.4
 RUN jenkins-plugin-cli --plugins \
         kubernetes:1.31.3 \
         workflow-aggregator:2.6 \
